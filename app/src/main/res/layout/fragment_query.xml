@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/bookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/book_name"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/bookAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/author"/>
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/alias"
+        android:hint="@string/alias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/edit_tag"
+        android:hint="@string/tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/addLibrary"
+        android:text="@string/add_library"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/query_book"
+        android:text="@string/query_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/clear_edition"
+        android:text="@string/clear_edition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatButton
+        android:text="@string/option_data"
+        android:id="@+id/do_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

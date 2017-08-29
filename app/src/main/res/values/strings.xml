@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LibraryWithRoom</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_library">加入图书馆</string>
+    <string name="alias">别名</string>
+    <string name="author">作者</string>
+    <string name="book_name">书名</string>
+    <string name="leave_library">撤出图书馆</string>
+    <string name="query_book">查询图书馆书籍</string>
+    <string name="clear_edition">清除编辑框</string>
+    <string name="option_data">操作数据库</string>
+    <string name="tag">标签</string>
+</resources>
