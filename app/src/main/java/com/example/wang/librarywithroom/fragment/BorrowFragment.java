@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wang.librarywithroom.MainActivity;
 import com.example.wang.librarywithroom.R;
 import com.example.wang.librarywithroom.Room.BookDao;
 import com.example.wang.librarywithroom.Room.ExtraColumn;
@@ -48,8 +49,8 @@ public class BorrowFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_borrow, container, false);
-        mBookDao = LibraryDataBase.getLibraryDataBase(getActivity()).getBookDao();
+        View view = inflater.inflate(R.layout.fragment_borrow, container, false);
+        mBookDao = ((MainActivity) getActivity()).getBookDao();
         editTag = view.findViewById(R.id.edit_tag);
         editTitle = view.findViewById(R.id.edit_title);
         queryExtra = view.findViewById(R.id.query_extra);

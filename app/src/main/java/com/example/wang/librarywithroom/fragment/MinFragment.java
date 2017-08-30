@@ -7,11 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wang.librarywithroom.MainActivity;
-import com.example.wang.librarywithroom.Room.LibraryDataBase;
 import com.example.wang.librarywithroom.Room.User;
 import com.example.wang.librarywithroom.Room.UserDAO;
 
@@ -28,7 +26,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  *
- * Created by wang on 2017/8/23.
+ * Created by wk on 2017/8/23.
  */
 
 public class MinFragment extends Fragment {
@@ -60,7 +58,7 @@ public class MinFragment extends Fragment {
     }
 
     private void saveUser() {
-        mUserDao = LibraryDataBase.getLibraryDataBase(getContext()).getUserDao();
+        mUserDao = ((MainActivity) getActivity()).getUserDao();
         final List<User> userList = new ArrayList<>();
         mUser = new User();
         mUser.setBookId(1);

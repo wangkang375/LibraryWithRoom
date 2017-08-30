@@ -5,7 +5,7 @@ import android.app.Application;
 import com.facebook.stetho.Stetho;
 
 /**
- * {@literal https://developer.android.com/topic/libraries/architecture/adding-components.html }
+ *
  * Created by wang on 2017/8/23.
  */
 

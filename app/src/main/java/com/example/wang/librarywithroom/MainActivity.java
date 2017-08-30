@@ -73,12 +73,30 @@ public class MainActivity extends AppCompatActivity {
 
         replaceFragment(0);
 
+        initDAO();
         /*为测试外键做准备*/
 //        saveUser();
 
     }
 
+    private void initDAO() {
+        mBookDao = LibraryDataBase.getLibraryDataBase(this).getBookDao();
+        mUserDao = LibraryDataBase.getLibraryDataBase(this).getUserDao();
+    }
 
+    /**
+     * 获得userDAO
+     */
+    public UserDAO getUserDao() {
+        return mUserDao;
+    }
+
+    /**
+     * 获得BookDao
+     */
+    public BookDao getBookDao() {
+        return mBookDao;
+    }
 
 
     private void replaceFragment(int position) {

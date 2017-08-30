@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.wang.librarywithroom.MainActivity;
 import com.example.wang.librarywithroom.R;
 import com.example.wang.librarywithroom.Room.Book;
 import com.example.wang.librarywithroom.Room.BookDao;
@@ -75,7 +76,7 @@ public class QueryFragment extends Fragment implements View.OnClickListener, OnI
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_query, container, false);
+        View view = inflater.inflate(R.layout.fragment_query, container, false);
         mBookName = view.findViewById(R.id.bookName);
         mBookAuthor = view.findViewById(R.id.bookAuthor);
         mAlias = view.findViewById(R.id.alias);
@@ -94,7 +95,8 @@ public class QueryFragment extends Fragment implements View.OnClickListener, OnI
     }
 
     private void init() {
-        mBookDao = LibraryDataBase.getLibraryDataBase(getActivity()).getBookDao();
+        mBookDao = ((MainActivity) getActivity()).getBookDao();
+
         mBookAdapter = new BookAdapter(mBookList, getActivity());
         mRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecycleView.setAdapter(mBookAdapter);

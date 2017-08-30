@@ -35,6 +35,7 @@ public interface BookDao {
     int delete(Book book);
 
     @Query("DELETE FROM book WHERE book_name = :bookName")
+
     int delete(String bookName);
 
     @Query("SELECT * FROM book ORDER BY data DESC")
