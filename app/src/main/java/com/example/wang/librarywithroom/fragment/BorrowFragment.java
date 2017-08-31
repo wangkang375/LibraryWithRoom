@@ -40,7 +40,7 @@ public class BorrowFragment extends Fragment implements View.OnClickListener {
     private AppCompatButton queryExtra;
     private TextView tvContent;
     private BookDao mBookDao;
-    //是不是 3
+    //是不是 wk
     public static BorrowFragment newInstance() {
         Bundle args = new Bundle();
         BorrowFragment fragment = new BorrowFragment();
