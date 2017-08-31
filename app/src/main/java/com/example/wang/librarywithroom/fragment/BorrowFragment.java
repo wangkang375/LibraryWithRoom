@@ -29,10 +29,12 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
+ *
  * Created by wang on 2017/8/23.
  */
 
 public class BorrowFragment extends Fragment implements View.OnClickListener {
+
     private AppCompatEditText editTag;
     private AppCompatEditText editTitle;
     private AppCompatButton queryExtra;
